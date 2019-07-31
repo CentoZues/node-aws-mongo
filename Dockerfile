@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     jq \
     mongodb-org-tools=3.4.10 \
     mongodb-org-shell=3.4.10 && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get clean
+    
     
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 
